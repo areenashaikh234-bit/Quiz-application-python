@@ -1,2 +1,19 @@
 # Quiz-application-python
-Developed a console-based Quiz Application using Python that allows users to answer questions and receive instant feedback. The program validates responses, calculates scores, and displays results at the end of the quiz. Used dictionaries, loops, conditional statements, user input handling, and string methods to create an interactive application.
+questions ={
+    "what is the capital of India?": "Delhi",
+    "Which language is used for python development?": "Python",
+    "How many days are there in a week?": "7"
+    }
+score=0
+for question, answer in questions.items():
+    user_answer = input(question+"")
+
+    if user_answer.lower() == answer.lower():
+        print("correct")
+        score += 1
+    else:
+        print("wrong!")
+
+print("\nQuiz completed!")
+print("your score:", score, "/", len(questions))
+
